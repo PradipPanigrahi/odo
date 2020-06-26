@@ -1,6 +1,8 @@
 dist: xenial
 sudo: required
-
+arch:
+  - ppc64le
+  - amd64
 language: go
 
 jobs:
@@ -9,9 +11,11 @@ jobs:
     - &base-test
       stage: test
       go_import_path: github.com/openshift/odo
-      go: "1.12.x"
+      go: "1.14.x"
       install:
         - make goget-tools
+        - wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
+        - tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
       script:
         - lsb_release -a
         - export PATH="$PATH:$GOPATH/bin"
@@ -31,7 +35,7 @@ jobs:
       init:
       - git config --system core.longpaths true
       go_import_path: github.com/openshift/odo
-      go: "1.12.x"
+      go: "1.14.x"
       install:
         - systeminfo.exe | grep '^OS'
         - choco install make
@@ -50,7 +54,7 @@ jobs:
       os:
         - osx
       go_import_path: github.com/openshift/odo
-      go: "1.12.x"
+      go: "1.14.x"
       install:
         - make goget-tools
       script:
