@@ -16,11 +16,13 @@ jobs:
       stage: test
       go_import_path: github.com/openshift/odo
       go: "1.14.x"
+    - sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo 
       install:
         #- sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
         #- sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
         - make goget-tools
       script:
+        - sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo
         - lsb_release -a
         - export PATH="$PATH:$GOPATH/bin"
         - make bin
