@@ -5,9 +5,9 @@ arch:
   - amd64
 language: go
 
-before_script:
-  - sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
-  - sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
+#before_script:
+ # - sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
+ # - sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
 
 jobs:
   include:
