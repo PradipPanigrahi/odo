@@ -14,8 +14,8 @@ jobs:
       go: "1.14.x"
       install:
         - make goget-tools
-        - wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
-        - tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
+        - sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
+        - sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
       script:
         - lsb_release -a
         - export PATH="$PATH:$GOPATH/bin"
