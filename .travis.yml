@@ -23,7 +23,6 @@ jobs:
         - sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo
         - make goget-tools
       script:
-        #- sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo
         - lsb_release -a
         - export PATH="$PATH:$GOPATH/bin"
         - make bin
