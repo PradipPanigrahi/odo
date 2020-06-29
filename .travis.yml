@@ -42,7 +42,7 @@ jobs:
         - windows
       init:
       - git config --system core.longpaths true
-      go_import_path: github.com/openshift/odo
+      go_import_path: github.com/PradipPanigrahi/openshift/odo
       go: "1.14.x"
       install:
         - systeminfo.exe | grep '^OS'
