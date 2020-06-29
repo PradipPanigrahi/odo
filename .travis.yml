@@ -8,6 +8,12 @@ language: go
 #before_script:
  # - sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
  # - sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
+ 
+
+before_install:
+  - sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
+  - sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
+  - sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo
 
 jobs:
   include:
@@ -18,10 +24,7 @@ jobs:
       go: "1.14.x"
     
       install:
-        #- sudo wget https://dl.google.com/go/go1.12.13.linux-ppc64le.tar.gz -P /tmp
-        #- sudo tar -xvf /tmp/go1.12.13.linux-ppc64le.tar.gz -C /usr/local/
-        - sudo cd /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/openshift/odo
-        - make goget-tools
+         - make goget-tools
       script:
         - lsb_release -a
         - export PATH="$PATH:$GOPATH/bin"
