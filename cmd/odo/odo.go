@@ -4,9 +4,9 @@ import (
 	"flag"
 	"os"
 
-	"github.com/PradipPanigrahi/openshift/odo/pkg/log"
-	"github.com/PradipPanigrahi/openshift/odo/pkg/odo/cli"
-	"github.com/PradipPanigrahi/openshift/odo/pkg/odo/cli/version"
+	"github.com/openshift/odo/pkg/log"
+	"github.comopenshift/odo/pkg/odo/cli"
+	"github.com/openshift/odo/pkg/odo/cli/version"
 	"github.com/openshift/odo/pkg/odo/util"
 	"github.com/openshift/odo/pkg/odo/util/completion"
 	"github.com/openshift/odo/pkg/preference"
