@@ -1,4 +1,4 @@
-PROJECT := /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/github.com/PradipPanigrahi/openshift/odo
+PROJECT := /home/travis/gopath/src/github.com/PradipPanigrahi/openshift/odo
 ifdef GITCOMMIT
         GITCOMMIT := $(GITCOMMIT)
 else
