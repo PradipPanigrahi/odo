@@ -6,7 +6,8 @@ else
 endif
 PKGS := $(shell go list  ./... | grep -v $(PROJECT)/vendor | grep -v $(PROJECT)/tests)
 COMMON_FLAGS := -X $(PROJECT)/pkg/version.GITCOMMIT=$(GITCOMMIT)
-BUILD_FLAGS := -ldflags="-w $(COMMON_FLAGS)"
+#BUILD_FLAGS := -ldflags="-w $(COMMON_FLAGS)"
+BUILD_FLAGS := -ldflags="-w /home/travis/gopath/src/github.com/PradipPanigrahi/odo/vendor/$(COMMON_FLAGS) 
 DEBUG_BUILD_FLAGS := -ldflags="$(COMMON_FLAGS)"
 FILES := odo dist
 TIMEOUT ?= 7200s
