@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/openshift/odo/pkg/log"
-	"github.comopenshift/odo/pkg/odo/cli"
+	"github.com/openshift/odo/pkg/odo/cli"
 	"github.com/openshift/odo/pkg/odo/cli/version"
 	"github.com/openshift/odo/pkg/odo/util"
 	"github.com/openshift/odo/pkg/odo/util/completion"
